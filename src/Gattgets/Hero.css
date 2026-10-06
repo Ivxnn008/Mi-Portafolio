@@ -1,0 +1,118 @@
+
+.hero {
+  background: #1c2632;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 64px 48px;
+  flex-wrap: wrap;
+}
+
+.hero-text {
+  flex: 1;
+  min-width: 260px;
+  text-align: left;
+}
+
+.hero-name {
+  font-size: 56px;
+  font-weight: 700;
+  color: #2f4059;
+  margin: 0;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.hero-content {
+  margin-top: -26px;
+}
+
+.hero-role {
+  font-size: 18px;
+  color: #5eead4;
+  font-weight: 600;
+  margin: 0 0 14px;
+}
+
+.hero-description {
+  font-size: 15px;
+  color: #94a3b8;
+  max-width: 380px;
+  margin: 0 0 24px;
+  line-height: 1.5;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.btn {
+  padding: 10px 22px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.btn-outline {
+  border: 1.5px solid #5eead4;
+  color: #5eead4;
+  background: transparent;
+}
+
+.btn-outline:hover {
+  background: #5eead4;
+  color: #0f2b28;
+}
+
+.btn-filled {
+  background: #5eead4;
+  color: #0f2b28;
+  border: 1.5px solid #5eead4;
+}
+
+.btn-filled:hover {
+  background: transparent;
+  color: #5eead4;
+}
+
+.hero-photo-wrapper {
+  flex: 1;
+  min-width: 200px;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-photo {
+  width: 220px;
+  height: 220px;
+  border-radius: 16px;
+  object-fit: cover;
+  background: #2f4059;
+}
+
+@media (max-width: 720px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 48px 24px;
+  }
+  .hero-text {
+    text-align: center;
+  }
+  .hero-buttons {
+    justify-content: center;
+  }
+  .hero-name {
+    font-size: 42px;
+  }
+  .hero-photo {
+    width: 160px;
+    height: 160px;
+  }
+}
+

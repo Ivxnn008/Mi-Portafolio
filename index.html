@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="stylesheet" href="src/index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>portafolio-react</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="navbar-left">
+        <div class="brand">
+          <img class="avatar" src="public/Image2.jpeg" alt="Foto de perfil">
+      <span class="brand-name">Ivan Garcia</span>
+    </div>
+
+    <ul class="nav-links">
+      <li><a href="#" class="active">Inicio</a></li>
+      <li><a href="#">Proyectos</a></li>
+      <li><a href="#">Acerca de mi</a></li>
+      <li><a href="#">Hobbies</a></li>
+      <li class="dropdown" id="dropdown">
+        <button class="dropdown-toggle" id="dropdownToggle" aria-haspopup="true" aria-expanded="false">
+          Contacto
+          <svg class="chevron" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <ul class="dropdown-menu">
+          <li><a href="#">Email</a></li>
+          <li><a href="#">LinkedIn</a></li>
+          <li><a href="#">Instagram</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <div class="navbar-right">
+    <input type="text" class="search-input" placeholder="Búsqueda">
+    <button class="search-btn">Búscar</button>
+  </div>
+</nav>
+    </header>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+
+
+  <script>
+      const dropdown = document.getElementById('dropdown');
+      const toggle = document.getElementById('dropdownToggle');
+
+        toggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const isOpen = dropdown.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', isOpen);
+        }
+  );
+
+      document.addEventListener('click', () => {
+      dropdown.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+      }
+  );
+  </script>
+  </body>
+</html>
